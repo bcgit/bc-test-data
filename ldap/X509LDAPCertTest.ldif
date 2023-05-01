@@ -1,0 +1,37 @@
+dn: dc=test
+objectClass: top
+objectClass: domain
+dc: test
+
+dn: cn=schema2,dc=test
+objectClass: top
+objectClass: ldapSubEntry
+objectClass: subschema
+cn: schema2
+objectClasses: ( 10.19.19.78 NAME 'user' DESC '' SUP top STRUCTURAL MUST memberOf )
+
+dn: dc=people,dc=test
+objectClass: top
+objectClass: domain
+dc: people
+
+dn: dc=groups,dc=test
+objectClass: top
+objectClass: domain
+dc: groups
+
+dn: cn=test-group,dc=groups,dc=test
+objectClass: groupOfUniqueNames
+cn: test group
+
+dn: cn=Testy Tester,dc=people,dc=test
+objectClass: Person
+objectClass: organizationalPerson
+sn: Tester
+cn: Testy Tester
+
+dn: cn=chars[*()\\0],dc=people,dc=test
+objectClass: Person
+objectClass: organizationalPerson
+sn: chars
+cn: chars[*()\\0]
