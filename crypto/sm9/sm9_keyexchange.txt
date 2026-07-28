@@ -1,5 +1,12 @@
-# SM9 key exchange - official worked example (KAT)
-# Source: GM/T 0044.5-2016 Part 5, Annex B (密钥交换协议示例).
+# SM9 key exchange - official worked example (KAT), hid = 0x02
+# Source: GM/T 0044.5-2016 Part 5, Annex B (密钥交换协议示例), CHINESE edition.
+#
+# The OFFICIAL ENGLISH edition of the same Annex B carries a DIFFERENT worked
+# example, using hid = 0x03; it is in sm9_keyexchange_hid03.txt, whose header
+# explains the discrepancy. Both are internally consistent and both are exercised
+# by SM9KeyExchangeTest - hid is a value the KGC chooses and publishes
+# (GM/T 0044.3-2016), not a fixed per-algorithm constant.
+#
 # Reuses the encryption master key (ke, Ppub-e=[ke]P1 in G1) with hid = 0x02;
 # user keys de = [t2]P2 in G2. Shared key SK = KDF(IDA||IDB||RA||RB||g1||g2||g3, klen);
 # RA/RB serialized x||y (64 bytes). Verified byte-exact (scratchpad/sm9_kex.py).

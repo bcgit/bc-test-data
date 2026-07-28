@@ -1,0 +1,65 @@
+# SM9 key exchange - official worked example (KAT), hid = 0x03
+#
+# Source: GM/T 0044.5-2016, Annex B (informative) "Example of key exchange
+#         protocol", as published in the OFFICIAL ENGLISH TEXT of GM/T 0044-2016
+#         by the Cryptography Standardization Technical Committee (密码行业标准化
+#         技术委员会), 2025-01-23:
+#         http://www.gmbz.org.cn/main/postDetail.html?id=20250123174859
+#         file: "SM9 Identity-based Cryptographic Algorithms Part 5： Parameter
+#         definition.pdf".  Transcribed programmatically from that PDF's text
+#         layer (not OCR); every value below occurs verbatim in its Annex B.
+#
+# WHY THERE ARE TWO KEY-EXCHANGE VECTOR FILES
+#
+#   The Chinese and English editions of GM/T 0044.5-2016 carry DIFFERENT worked
+#   examples in Annex B, and both are internally consistent:
+#
+#     sm9_keyexchange.txt        Chinese edition, hid = 0x02, SK = C5C13A8F...
+#     sm9_keyexchange_hid03.txt  English edition, hid = 0x03, SK = 68B20D30...  (this file)
+#
+#   This is not a contradiction in the algorithm. GM/T 0044.3-2016 defines hid as
+#   "identifier of the encryption private key generating function, denoted by one
+#   byte", which "the KGC chooses ... and makes public" - it is a deployment
+#   parameter, not a fixed per-algorithm constant. The two editions simply chose
+#   different hid values when generating their examples. Carrying both exercises
+#   the implementation against a KGC-selected hid rather than a hardcoded one.
+#
+#   Note: two display lines in the English Annex B print the concatenation as
+#   "426F6202" / "416C6963 6502" (hid = 0x02) inside an otherwise hid = 0x03
+#   example. Those two lines are typos in that edition - the H1 values printed
+#   beside them are H1(Bob||0x03) = 9CB1F628... and H1(Alice||0x03) = 32DEE8AA...,
+#   and every downstream value is the hid = 0x03 one.
+#
+# Reuses the encryption master key (Ppub-e = [ke]P1 in G1) with hid = 0x03; user
+# keys de = [t2]P2 in G2. Shared key SK = KDF(IDA||IDB||RA||RB||g1||g2||g3, klen);
+# RA/RB serialized x||y (64 bytes). All hex big-endian.
+
+ke = 0002E65B0762D042F51F0D23542B13ED8CFA2E9A0E7206361E013A283905E31F
+Ppube_x = 9174542668E8F14AB273C0945C3690C66E5DD09678B86F734C4350567ED06283
+Ppube_y = 54E598C6BF749A3DACC9FFFEDD9DB6866C50457CFC7AA2A4AD65C3168FF74210
+hid = 03
+klen_bits = 128
+IDA_ascii = Alice
+IDA = 416C696365
+IDB_ascii = Bob
+IDB = 426F62
+# de_A = [t2]P2, de_B = [t4]P2 (G2 points; _hi = u-coefficient, _lo = constant)
+deA_x_hi = 4C5EC9C8CA8DEBA238CC3E500458F5147911F2251A4BD0AA903BB5F8D5FD23B4
+deA_x_lo = 0360DBBDD69A05730775BB3F8AD799CC571DCB883D417B8D239302BD90097C6B
+deA_y_hi = 21F05A64F659287400F2D20272329F2A80EB60767C9FF9D23CE8046AF5C950D0
+deA_y_lo = 68AFFFD503C768A765731F62FC3CB7B7705456D40830E868CC17A7F951855678
+deB_x_hi = 713E27FB1C09A61A0862654578D4A6450E1493EFEC23DB0F7C428B99DDFDDDE8
+deB_x_lo = 0D9C3B422AEBB8ABFC847D8AAB1348B6F96F103DCEDCD7A5DC9071036706AF22
+deB_y_hi = 83F7CED774B11E44D56FD48137E97AC751BDF497E442DCFEAD9411998293A4D9
+deB_y_lo = 011D5E966FEDB249E02F1A539E362C42CD9E70D0CE83F33DE494583F6DD04276
+# ephemerals
+rA = 00005879DD1D51E175946F23B1B41E93BA31C584AE59A426EC1046A4D03B06C8
+rB = 00018B98C44BEF9F8537FB7D071B2C928B3BC65BD3D69E1EEE213564905634FE
+RA_x = 767A4BED09FFBB5229D9CAA165548FFA8284A315B15FBA864887A9AFA5B755FC
+RA_y = 02A4E50351092133252BA61609779B455DF9C4A0109ACE241485A955D5B81726
+RB_x = 8168903E4A56DC4117387217C0AA55AB72A5F6A78973E612A58AABE2A5BBC828
+RB_y = 7E07CE2D3B285A56148D66FC64FE0ED928BA902C1FDA056C0083AF2CB66528AE
+# outputs
+SK = 68B20D3077EA6E2B825315836FDBC633
+S_B = E122B3BFA8965562AA0A4A92B671A193352F28328A129BFF45C4DD262EBCB9EE
+S_A = 6CD5231217E73D80548A1A65DED178493F4282E6E471FE3EF62271EA758470E6
