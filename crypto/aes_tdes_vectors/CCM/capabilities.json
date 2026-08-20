@@ -1,0 +1,1 @@
+[{"acvVersion":"1.0"},{"isSample":false,"algorithms":[{"algorithm":"ACVP-AES-CCM","revision":"1.0","direction":["encrypt","decrypt"],"keyLen":[128,192,256],"payloadLen":[64,128,192],"ivLen":[96],"aadLen":[128,256],"tagLen":[96,128]}]}]
