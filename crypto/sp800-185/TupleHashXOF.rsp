@@ -1,0 +1,60 @@
+# TupleHashXOF sample values (SP 800-185 Sec 5.3.1)
+#  Extracted from the NIST SP 800-185 sample value files; see README.md
+#  Lengths are in bits. S is a character string; an empty S means no customization.
+
+COUNT = 0
+Strength = 128
+S = 
+Outputlen = 256
+Count = 2
+Tuple1 = 000102
+Tuple2 = 101112131415
+Output = 2f103cd7c32320353495c68de1a8129245c6325f6f2a3d608d92179c96e68488
+
+COUNT = 1
+Strength = 128
+S = My Tuple App
+Outputlen = 256
+Count = 2
+Tuple1 = 000102
+Tuple2 = 101112131415
+Output = 3fc8ad69453128292859a18b6c67d7ad85f01b32815e22ce839c49ec374e9b9a
+
+COUNT = 2
+Strength = 128
+S = My Tuple App
+Outputlen = 256
+Count = 3
+Tuple1 = 000102
+Tuple2 = 101112131415
+Tuple3 = 202122232425262728
+Output = 900fe16cad098d28e74d632ed852f99daab7f7df4d99e775657885b4bf76d6f8
+
+COUNT = 3
+Strength = 256
+S = 
+Outputlen = 512
+Count = 2
+Tuple1 = 000102
+Tuple2 = 101112131415
+Output = 03ded4610ed6450a1e3f8bc44951d14fbc384ab0efe57b000df6b6df5aae7cd568e77377daf13f37ec75cf5fc598b6841d51dd207c991cd45d210ba60ac52eb9
+
+COUNT = 4
+Strength = 256
+S = My Tuple App
+Outputlen = 512
+Count = 2
+Tuple1 = 000102
+Tuple2 = 101112131415
+Output = 6483cb3c9952eb20e830af4785851fc597ee3bf93bb7602c0ef6a65d741aeca7e63c3b128981aa05c6d27438c79d2754bb1b7191f125d6620fca12ce658b2442
+
+COUNT = 5
+Strength = 256
+S = My Tuple App
+Outputlen = 512
+Count = 3
+Tuple1 = 000102
+Tuple2 = 101112131415
+Tuple3 = 202122232425262728
+Output = 0c59b11464f2336c34663ed51b2b950bec743610856f36c28d1d088d8a2446284dd09830a6a178dc752376199fae935d86cfdee5913d4922dfd369b66a53c897
+
