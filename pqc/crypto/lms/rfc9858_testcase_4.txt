@@ -1,0 +1,187 @@
+! RFC 9858 Appendix A.4, Test Vector for SHA-256/192, W=4: private key SEED
+   --------------------------------------------
+   (note: procedure in Appendix A of [RFC8554] is used)
+   SEED        $202122232425262728292a2b2c2d2e2f
+               $3031323334353637
+   --------------------------------------------
+
+! private key I
+   --------------------------------------------
+   I           $404142434445464748494a4b4c4d4e4f
+   --------------------------------------------
+
+! HSS public key
+   --------------------------------------------
+   HSS public key
+   levels      $00000001
+   --------------------------------------------
+   LMS type    $0000000d                         # LMS_SHA256_M24_H20
+   LM-OTS type $00000007                         # LMOTS_SHA256_N24_W4
+   I           $404142434445464748494a4b4c4d4e4f
+   K           $9c08a50d170406869892802ee4142fcd
+               $eac990f110c2460c
+   --------------------------------------------
+
+! Message
+   --------------------------------------------
+   Message     $54657374206d65737361676520666f72  # |Test message for|
+               $205348413235362f31393220773d34  # | SHA256/192 w=4|
+   --------------------------------------------
+
+! HSS signature
+   --------------------------------------------
+   HSS signature
+   Nspk        $00000000
+   sig[0]:
+   --------------------------------------------
+   LMS signature
+   q           $00000064
+   --------------------------------------------
+   LM-OTS signature
+   LM-OTS type $00000007                         # LMOTS_SHA256_N24_W4
+   C          $853fa6e1a65fef076acd2485505b93be
+              $9aeb2641e3d3805c
+   y[0]       $1887f26f4bcdb6ac0337b76fa5d66038
+              $34287e010b20516f
+   y[1]       $7c336df2134c0a981f1ec2bb7baee516
+              $e91e67d3bd16c8d9
+   y[2]       $45a7f2be4fd84a604ae3743efc609ee0
+              $e69572e9c6d4a682
+   y[3]       $50e877b75d3cae63e9d5c15a32bb3cd1
+              $7045f6b3e195284f
+   y[4]       $dd1ee3cfbe18f1cbd06ef3e7af34b184
+              $4d42dac453115a45
+   y[5]       $07ed525cec120d054b403c61a7e5034f
+              $ac4be6ef5412d194
+   y[6]       $d4b6bbc0ae6cd3fe9993d583ee06f403
+              $0bc832efec24d1f7
+   y[7]       $13f5088731b91a98491fa3adf1b322bc
+              $e26df24c8415e3a4
+   y[8]       $6bdfe07a6fd48e6d951515758cd64349
+              $91098bf6949249fc
+   y[9]       $a338ec235871dd564998d07d9b1b1b8d
+              $644e657fee8039da
+   y[10]      $8fe195d129faddb12d543b86b0ab8cf6
+              $f26c121783f3b828
+   y[11]      $d03f793b42909272f688e4ef6d46e82b
+              $dd1a02b1ff86c3b7
+   y[12]      $9920b2e6f19faf75c623242f1f2c549f
+              $84fb2f4c3ffead31
+   y[13]      $20d97baea507467bb2da79f132bbe15b
+              $596fdfcb70983107
+   y[14]      $ebca2597de9d55bd83bcae5c28a85259
+              $dadb354859986e60
+   y[15]      $c8afa0b10bd08a8f9ed9b1ede3377075
+              $fe0ae36349f7d2ed
+   y[16]      $7bfc9ece0d4cd6972059329419feaf3b
+              $9a1045b6cfa4ae89
+   y[17]      $b1cea8950aea4af870d1a3a3909ebc5a
+              $3013d6deb927abc0
+   y[18]      $f95093e83cb36a9c1d6f13add19268ac
+              $7a0371f8335b0952
+   y[19]      $a57fdb0141d55d937dd6ebb08fee8a5c
+              $f426ac97d54ee7aa
+   y[20]      $17e6c57be5e62a52a6b1b986730d3a3a
+              $ad8a7d327ddf883e
+   y[21]      $6bc7b636eb2a5c4f2a635ae5bada5418
+              $d43dfedb69c0a020
+   y[22]      $9334fac89d420d6ad5a2e1df95d26a1b
+              $feb99a5e8455061b
+   y[23]      $fdf2d6e8394caf8a4be699b8afa38e52
+              $4d4053330af478f8
+   y[24]      $5bf33d3ca3a35bc96987282bd513a8f6
+              $a52db9ba36aa9088
+   y[25]      $2b3bf573fa275449d8d49eb30bed2bb1
+              $7a0ecc7d8a20807f
+   y[26]      $2ea3dd37acd46c713cc2ac9d01a20a30
+              $d6832eef86a1e26d
+   y[27]      $1cad7761bf4130a6565572766026509d
+              $eeddaf46b605452b
+   y[28]      $218a4e137a7ce063b546a35c52510f0e
+              $a2cac879192ec443
+   y[29]      $e43b37c5ffa23da7a7fc254324a3de70
+              $5c771794f10ea356
+   y[30]      $e5a747e5146fd804a47719803c185b38
+              $0e34b8dcc8269c2b
+   y[31]      $073d86b2307cf90c6c3ef9271f2d53df
+              $2579f0c4cfb632db
+   y[32]      $37a9025965f70b4616673228e98644be
+              $6576417b7a97f104
+   y[33]      $350259e7f697408cdf8cf81a3e774162
+              $6ccdb87ad8531264
+   y[34]      $cb5ceb7c8c097cec505091a3ee3a826c
+              $54f78169abc2e7d0
+   y[35]      $a318dac10250ba940e51e79a3f572fb3
+              $2bf442be6fd81267
+   y[36]      $946e6387f9a8c705d945c653f2684655
+              $e3fa6b9ee311d8a0
+   y[37]      $91bef9898292fa272fb8761f066c23d8
+              $7aa10d67871cc541
+   y[38]      $9c843b796855c51ad1272e9264acd203
+              $5a82b12c2ddbc85a
+   y[39]      $dfcd7c22366a36495349391dbf000106
+              $4b8f6b28365445d7
+   y[40]      $33e48f1b058a6cb3e71bbb8df3e90406
+              $299894f4ca682943
+   y[41]      $ceeba410b33b07716ffc18d6eab75f2d
+              $6372f1133605fa3c
+   y[42]      $3ed66f2d8f7c5abe59e87d4500965e34
+              $7523d73cb356c144
+   y[43]      $827aaa22b1c72a15293c7400e02aaefc
+              $f36f68a8246900e6
+   y[44]      $e6228e7ad19d1450c23434f1e45043dc
+              $2b6db57f20d8f5b3
+   y[45]      $44d4162aa651333287cd8bf8fac41c78
+              $d61fe2929209bfe2
+   y[46]      $dc5a2f80205c043b22e540a29f0ea0a5
+              $ff529e55bf1dfe42
+   y[47]      $96fc4bb4ac2e875322ab115db479fe97
+              $9d64f78409af4ec3
+   y[48]      $ad3b758fff83af1b9c48e90ca39366f4
+              $26c2fb921df55c72
+   y[49]      $786a9217723945a1ac1a66af7def4f8b
+              $367001732cce0e5b
+   y[50]      $ac91ac9d603807f8bab105b46d315d4c
+              $b88feb1c8686884b
+   --------------------------------------------
+   LMS type    $0000000d                         # LMS_SHA256_M24_H20
+   path[0]    $13d1a8ef00c5811c15c4d774fdcf7515
+              $5315aff53ebdff8f
+   path[1]    $b6a54f12c165963dd5690cc9842b0e21
+              $90afc5443497584c
+   path[2]    $832155599d00aced84bb3b59170396f7
+              $db4fa84aa8577f76
+   path[3]    $cf9367d6e99d3d5be3555d7156b004f2
+              $002f505681b1ad22
+   path[4]    $9b9b46a666672aa8ee662c3a0456a9ad
+              $da7a44fbaca46789
+   path[5]    $577dcd36dc5cdff34b864d0a32492a0a
+              $cbcaa6c011748f20
+   path[6]    $5b91ab2ab84f2333fb3e3b9acaecdac3
+              $8b58aa5f32e718e2
+   path[7]    $25631ed6674cccb8c119acbd4992ab31
+              $30a6e912deec5983
+   path[8]    $5ab52fbc549430f8b403e4a2a51cc7f4
+              $6fc143d365763aa1
+   path[9]    $708fd25bcd657a790e54718d97090624
+              $2a3b8a97dff18e91
+   path[10]   $a44c4ba818a8dd2d242251265b023b82
+              $6077eb740f6682e6
+   path[11]   $c4ada2b85a67988d406132c2ad899099
+              $e44cfe610c3a5af7
+   path[12]   $0b406224411a59597e5dda0f31cd16c9
+              $14b67e96141661f0
+   path[13]   $074f43eb02273481bc324ded26c64f23
+              $88559d8c8bd0ef8b
+   path[14]   $34ca4afebfac2a689b4246c264241488
+              $dcf922350dc44f7b
+   path[15]   $c09d57dc1126291b2318810e0f44801c
+              $071e572fd032c780
+   path[16]   $f44c9503a4c03c37417dc96422ba0849
+              $c37956f9fd5d33ea
+   path[17]   $4fcab84276effec652ca77d7d47ac93c
+              $633d99e0a236f03d
+   path[18]   $5587d1990ffaef737fced1f5cdd8f373
+              $844e9f316aad41a0
+   path[19]   $b12302639f83a2d74c9fe30d305a942b
+              $c0c30352a5e44dfb
