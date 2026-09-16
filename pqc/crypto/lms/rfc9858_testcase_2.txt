@@ -1,0 +1,107 @@
+! RFC 9858 Appendix A.2, Test Vector for SHAKE256/192: private key SEED
+   --------------------------------------------
+   (note: procedure in Appendix A of [RFC8554] is used)
+   SEED        $303132333435363738393a3b3c3d3e3f
+               $4041424344454647
+   --------------------------------------------
+
+! private key I
+   --------------------------------------------
+   I           $505152535455565758595a5b5c5d5e5f
+   --------------------------------------------
+
+! HSS public key
+   ---------------------------------------------
+   HSS public key
+   levels      $00000001
+   --------------------------------------------
+   LMS type    $00000014                         # LMS_SHAKE_N24_H5
+   LM-OTS type $00000010                         # LMOTS_SHAKE_N24_W8
+   I           $505152535455565758595a5b5c5d5e5f
+   K           $db54a4509901051c01e26d9990e55034
+               $7986da87924ff0b1
+   --------------------------------------------
+
+! Message
+   --------------------------------------------
+   Message     $54657374206d65737361676520666f72  # |Test message for|
+               $205348414b453235362d3139320a  # | SHAKE256/192.|
+   --------------------------------------------
+
+! HSS signature
+   --------------------------------------------
+   HSS signature
+   Nspk        $00000000
+   sig[0]:
+   --------------------------------------------
+   LMS signature
+   q           $00000006
+   --------------------------------------------
+   LM-OTS signature
+   LM-OTS type $00000010                         # LMOTS_SHAKE_N24_W8
+   C           $84219da9ce9fffb16edb94527c6d1056
+               $5587db28062deac4
+   y[0]        $208e62fc4fbe9d85deb3c6bd2c01640a
+               $ccb387d8a6093d68
+   y[1]        $511234a6a1a50108091c034cb1777e02
+               $b5df466149a66969
+   y[2]        $a498e4200c0a0c1bf5d100cdb97d2dd4
+               $0efd3cada278acc5
+   y[3]        $a570071a043956112c6deebd1eb3a7b5
+               $6f5f6791515a7b5f
+   y[4]        $fddb0ec2d9094bfbc889ea15c3c7b9be
+               $a953efb75ed648f5
+   y[5]        $35b9acab66a2e9631e426e4e99b733ca
+               $a6c55963929b77fe
+   y[6]        $c54a7e703d8162e736875cb6a455d4a9
+               $015c7a6d8fd5fe75
+   y[7]        $e402b47036dc3770f4a1dd0a559cb478
+               $c7fb1726005321be
+   y[8]        $9d1ac2de94d731ee4ca79cff454c811f
+               $46d11980909f047b
+   y[9]        $2005e84b6e15378446b1ca691efe491e
+               $a98acc9d3c0f785c
+   y[10]       $aba5e2eb3c306811c240ba2280292382
+               $7d582639304a1e97
+   y[11]       $83ba5bc9d69d999a7db8f749770c3c04
+               $a152856dc726d806
+   y[12]       $7921465b61b3f847b13b2635a45379e5
+               $adc6ff58a99b00e6
+   y[13]       $0ac767f7f30175f9f7a140257e218be3
+               $07954b1250c9b419
+   y[14]       $02c4fa7c90d8a592945c66e86a76defc
+               $b84500b55598a199
+   y[15]       $0faaa10077c74c94895731585c8f900d
+               $e1a1c675bd8b0c18
+   y[16]       $0ebe2b5eb3ef8019ece3e1ea7223eb79
+               $06a2042b6262b4aa
+   y[17]       $25c4b8a05f205c8befeef11ceff12825
+               $08d71bc2a8cfa0a9
+   y[18]       $9f73f3e3a74bb4b3c0d8ca2abd0e1c2c
+               $17dafe18b4ee2298
+   y[19]       $e87bcfb1305b3c069e6d385569a4067e
+               $d547486dd1a50d6f
+   y[20]       $4a58aab96e2fa883a9a39e1bd45541ee
+               $e94efc32faa9a94b
+   y[21]       $e66dc8538b2dab05aee5efa6b3b2efb3
+               $fd020fe789477a93
+   y[22]       $afff9a3e636dbba864a5bffa3e28d13d
+               $49bb597d94865bde
+   y[23]       $88c4627f206ab2b465084d6b780666e9
+               $52f8710efd748bd0
+   y[24]       $f1ae8f1035087f5028f14affcc5fffe3
+               $32121ae4f87ac5f1
+   y[25]       $eac9062608c7d87708f1723f38b23237
+               $a4edf4b49a5cd3d7
+   --------------------------------------------
+   LMS type    $00000014                         # LMS_SHAKE_N24_H5
+   path[0]     $dd4bdc8f928fb526f6fb7cdb944a7eba
+               $a7fb05d995b5721a
+   path[1]     $27096a5007d82f79d063acd434a04e97
+               $f61552f7f81a9317
+   path[2]     $b4ec7c87a5ed10c881928fc6ebce6dfc
+               $e9daae9cc9dba690
+   path[3]     $7ca9a9dd5f9f573704d5e6cf22a43b04
+               $e64c1ffc7e1c442e
+   path[4]     $cb495ba265f465c56291a902e62a461f
+               $6dfda232457fad14

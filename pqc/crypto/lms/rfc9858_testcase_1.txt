@@ -1,0 +1,107 @@
+! RFC 9858 Appendix A.1, Test Case 1 - SHA-256/192: private key SEED
+   --------------------------------------------
+   (note: procedure in Appendix A of [RFC8554] is used)
+   SEED        $000102030405060708090a0b0c0d0e0f
+               $1011121314151617
+   --------------------------------------------
+
+! private key I
+   --------------------------------------------
+   I           $202122232425262728292a2b2c2d2e2f
+   --------------------------------------------
+
+! HSS public key
+   --------------------------------------------
+   HSS public key
+   levels      $00000001
+   --------------------------------------------
+   LMS type    $0000000a                         # LMS_SHA256_M24_H5
+   LM-OTS type $00000008                         # LMOTS_SHA256_N24_W8
+   I           $202122232425262728292a2b2c2d2e2f
+   K           $2c571450aed99cfb4f4ac285da148827
+               $96618314508b12d2
+   --------------------------------------------
+
+! Message
+   --------------------------------------------
+   Message     $54657374206d65737361676520666f72  # |Test message for|
+               $205348413235362d3139320a  # | SHA-256/192.|
+   --------------------------------------------
+
+! HSS signature
+   --------------------------------------------
+   HSS signature
+   Nspk        $00000000
+   sig[0]:
+   --------------------------------------------
+   LMS signature
+   q           $00000005
+   --------------------------------------------
+   LM-OTS signature
+   LM-OTS type $00000008                         # LMOTS_SHA256_N24_W8
+   C           $0b5040a18c1b5cabcbc85b047402ec62
+               $94a30dd8da8fc3da
+   y[0]        $e13b9f0875f09361dc77fcc4481ea463
+               $c073716249719193
+   y[1]        $614b835b4694c059f12d3aedd34f3db9
+               $3f3580fb88743b8b
+   y[2]        $3d0648c0537b7a50e433d7ea9d6672ff
+               $fc5f42770feab4f9
+   y[3]        $8eb3f3b23fd2061e4d0b38f832860ae7
+               $6673ad1a1a52a900
+   y[4]        $5dcf1bfb56fe16ff723627612f9a48f7
+               $90f3c47a67f870b8
+   y[5]        $1e919d99919c8db48168838cece0abfb
+               $683da48b9209868b
+   y[6]        $e8ec10c63d8bf80d36498dfc205dc45d
+               $0dd870572d6d8f1d
+   y[7]        $90177cf5137b8bbf7bcb67a46f86f26c
+               $fa5a44cbcaa4e18d
+   y[8]        $a099a98b0b3f96d5ac8ac375d8da2a7c
+               $248004ba11d7ac77
+   y[9]        $5b9218359cddab4cf8ccc6d54cb7e1b3
+               $5a36ddc9265c0870
+   y[10]       $63d2fc6742a7177876476a324b03295b
+               $fed99f2eaf1f3897
+   y[11]       $0583c1b2b616aad0f31cd7a4b1bb0a51
+               $e477e94a01bbb4d6
+   y[12]       $f8866e2528a159df3d6ce244d2b6518d
+               $1f0212285a3c2d4a
+   y[13]       $927054a1e1620b5b02aab0c8c10ed48a
+               $e518ea73cba81fcf
+   y[14]       $ff88bff461dac51e7ab4ca75f47a6259
+               $d24820b9995792d1
+   y[15]       $39f61ae2a8186ae4e3c9bfe0af2cc717
+               $f424f41aa67f03fa
+   y[16]       $edb0665115f2067a46843a4cbbd297d5
+               $e83bc1aafc18d1d0
+   y[17]       $3b3d894e8595a6526073f02ab0f08b99
+               $fd9eb208b59ff631
+   y[18]       $7e5545e6f9ad5f9c183abd043d5acd6e
+               $b2dd4da3f02dbc31
+   y[19]       $67b468720a4b8b92ddfe7960998bb7a0
+               $ecf2a26a37598299
+   y[20]       $413f7b2aecd39a30cec527b4d9710c44
+               $73639022451f50d0
+   y[21]       $1c0457125da0fa4429c07dad859c846c
+               $bbd93ab5b91b01bc
+   y[22]       $770b089cfede6f651e86dd7c15989c8b
+               $5321dea9ca608c71
+   y[23]       $fd862323072b827cee7a7e28e4e2b999
+               $647233c3456944bb
+   y[24]       $7aef9187c96b3f5b79fb98bc76c3574d
+               $d06f0e95685e5b3a
+   y[25]       $ef3a54c4155fe3ad817749629c30adbe
+               $897c4f4454c86c49
+   --------------------------------------------
+   LMS type    $0000000a                         # LMS_SHA256_M24_H5
+   path[0]     $e9ca10eaa811b22ae07fb195e3590a33
+               $4ea64209942fbae3
+   path[1]     $38d19f152182c807d3c40b189d3fcbea
+               $942f44682439b191
+   path[2]     $332d33ae0b761a2a8f984b56b2ac2fd4
+               $ab08223a69ed1f77
+   path[3]     $19c7aa7e9eee96504b0e60c6bb5c942d
+               $695f0493eb25f80a
+   path[4]     $5871cffd131d0e04ffe5065bc7875e82
+               $d34b40b69dd9f3c1
