@@ -48,3 +48,26 @@ section 4.20   RSASSA-PSS With SHA-512
 section 4.21   RSASSA-PSS With SHAKE128
 section 4.22   RSASSA-PSS With SHAKE256
 section 7      X.509 Certificate With Unconvertible RDN Attributes And Extensions
+
+Certification requests (section 8): <tag>_pkcs10.hex is the DER RFC 2986 request,
+<tag>_t3.hex the C509 type 3 form and <tag>_t2.hex the C509 type 2 form. Section 8.2
+publishes no type 2 form (a PrintableString challengePassword has no type 2 encoding).
+Sections 8.3 to 8.5 use the RFC 6955 ECDH proof-of-possession algorithms, whose
+"signature" is a DhSigStatic: 8.3 and 8.5 carry the bare hashValue byte string, 8.4 the
+[issuer, serial, hashValue] array form. Sections 8.6 and 8.7 carry the RFC 9883
+privateKeyPossessionStatement attribute, 8.7 with the signature certificate embedded
+(as a type 3 C509 certificate in the type 3 request, type 2 in the type 2 request).
+
+section 8.1    ECDSA With SHA256
+section 8.2    ECDSA With SHA384
+section 8.3    ECDH PoP With SHA-256 And HMAC-SHA256
+section 8.4    ECDH PoP With SHA-384 And HMAC-SHA384
+section 8.5    ECDH PoP With SHA-512 And HMAC-SHA512
+section 8.6    Unsigned PoP With X25519 Key
+section 8.7    Unsigned PoP With X25519 Key And Cert
+
+Certification request templates (section 10): <tag>_template.hex is the C509 encoding.
+
+section 10.1   All Fields Set to "undefined" Where Possible
+section 10.2   With One Element in Each Field
+section 10.3   Complex Template
